@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="contacto"
+            type="com.rzxengineering.pruebacasfid.objetos.Contacto"/>
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imagenContacto"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/edadTV"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@{@string/edadIns(contacto.edad)}"
+                app:layout_constraintBottom_toBottomOf="@+id/generoTV"
+                app:layout_constraintStart_toStartOf="@+id/nacimientoTV"
+                app:layout_constraintTop_toTopOf="@+id/generoTV" />
+
+            <TextView
+                android:id="@+id/generoTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="200dp"
+                android:text="@{@string/generoIns(contacto.genero)}"
+                app:layout_constraintStart_toStartOf="@+id/tituloTV"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tituloTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@{@string/tituloIns(contacto.titulo)}"
+                app:layout_constraintStart_toStartOf="@+id/nombreTV"
+                app:layout_constraintTop_toBottomOf="@+id/generoTV" />
+
+            <TextView
+                android:id="@+id/nacimientoTV"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{@string/fechaNacimientoIns(contacto.nacimiento)}"
+                app:layout_constraintBottom_toBottomOf="@+id/tituloTV"
+                app:layout_constraintStart_toStartOf="@+id/apellidosTV"
+                app:layout_constraintTop_toTopOf="@+id/tituloTV" />
+
+            <TextView
+                android:id="@+id/nombreTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{@string/nombreIns(contacto.nombre)}"
+                app:layout_constraintStart_toStartOf="@+id/nickNameTV"
+                app:layout_constraintTop_toBottomOf="@+id/tituloTV" />
+
+            <TextView
+                android:id="@+id/apellidosTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{@string/apellidosIns(contacto.apellidos)}"
+                app:layout_constraintBottom_toBottomOf="@+id/nombreTV"
+                app:layout_constraintStart_toStartOf="@+id/emailTV"
+                app:layout_constraintTop_toTopOf="@+id/nombreTV" />
+
+            <TextView
+                android:id="@+id/nickNameTV"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@{@string/nickNameIns(contacto.userName)}"
+                app:layout_constraintStart_toStartOf="@+id/zonaHorariaTV"
+                app:layout_constraintTop_toBottomOf="@+id/nombreTV" />
+
+            <TextView
+                android:id="@+id/emailTV"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{@string/emailIns(contacto.email)}"
+                app:layout_constraintBottom_toBottomOf="@+id/nickNameTV"
+                app:layout_constraintStart_toStartOf="@+id/descripcionHorariaTV"
+                app:layout_constraintTop_toTopOf="@+id/nickNameTV" />
+
+            <TextView
+                android:id="@+id/zonaHorariaTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@{@string/zonaHorariaIns(contacto.zonaHoraria)}"
+                app:layout_constraintStart_toStartOf="@+id/telefonoFijoTV"
+                app:layout_constraintTop_toBottomOf="@+id/nickNameTV" />
+
+            <TextView
+                android:id="@+id/descripcionHorariaTV"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{@string/descripcionZonaHorariaIns(contacto.descripcionZonaHoraria)}"
+                app:layout_constraintBottom_toBottomOf="@+id/zonaHorariaTV"
+                app:layout_constraintStart_toStartOf="@+id/telefonoMovilTV"
+                app:layout_constraintTop_toTopOf="@+id/zonaHorariaTV" />
+
+            <TextView
+                android:id="@+id/telefonoFijoTV"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@{@string/telefonoFijoIns(contacto.telefonoFijo)}"
+                app:layout_constraintStart_toStartOf="@+id/paisTV"
+                app:layout_constraintTop_toBottomOf="@+id/zonaHorariaTV" />
+
+            <TextView
+                android:id="@+id/telefonoMovilTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{@string/telefonoIns(contacto.telefonoMovil)}"
+                app:layout_constraintBottom_toBottomOf="@+id/telefonoFijoTV"
+                app:layout_constraintStart_toStartOf="@+id/provinciaTV"
+                app:layout_constraintTop_toTopOf="@+id/telefonoFijoTV" />
+
+            <TextView
+                android:id="@+id/paisTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{@string/paisIns(contacto.pais)}"
+                app:layout_constraintStart_toStartOf="@+id/ciudadTV"
+                app:layout_constraintTop_toBottomOf="@+id/telefonoFijoTV" />
+
+            <TextView
+                android:id="@+id/provinciaTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{@string/provinciaIns(contacto.provincia)}"
+                app:layout_constraintBottom_toBottomOf="@+id/paisTV"
+                app:layout_constraintStart_toStartOf="@+id/calleTV"
+                app:layout_constraintTop_toTopOf="@+id/paisTV" />
+
+            <TextView
+                android:id="@+id/ciudadTV"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{@string/ciudadIns(contacto.ciudad)}"
+                app:layout_constraintStart_toStartOf="@+id/codigoPostalTV"
+                app:layout_constraintTop_toBottomOf="@+id/paisTV" />
+
+            <TextView
+                android:id="@+id/calleTV"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{@string/calleIns(contacto.calle)}"
+                app:layout_constraintBottom_toBottomOf="@+id/ciudadTV"
+                app:layout_constraintStart_toStartOf="@+id/longitudTV"
+                app:layout_constraintTop_toTopOf="@+id/ciudadTV" />
+
+            <TextView
+                android:id="@+id/codigoPostalTV"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{@string/codigoPostalIns(contacto.codigoPostal)}"
+                app:layout_constraintStart_toStartOf="@+id/latitudTV"
+                app:layout_constraintTop_toBottomOf="@+id/ciudadTV" />
+
+            <TextView
+                android:id="@+id/longitudTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="100dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{@string/longitudIns(contacto.coordenadas[0])}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calleTV" />
+
+            <TextView
+                android:id="@+id/latitudTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{@string/latitudIns(contacto.coordenadas[1])}"
+                app:layout_constraintBottom_toBottomOf="@+id/longitudTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/longitudTV" />
+
+            <ImageButton
+                android:id="@+id/btnGuardarContacto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_save" />
+
+            <ImageButton
+                android:id="@+id/btnVerMapa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toTopOf="@+id/longitudTV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@android:drawable/ic_dialog_map" />
+
+            <ImageButton
+                android:id="@+id/btnQR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/qrcode" />
+
+            <Button
+                android:id="@+id/btnEnviarDatosGrpc"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/btnGrpc"
+                app:layout_constraintEnd_toStartOf="@+id/btnEnviarDatosDjango"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnVerMapa" />
+
+            <Button
+                android:id="@+id/btnEnviarDatosDjango"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btnDjango"
+                app:layout_constraintBottom_toBottomOf="@+id/btnEnviarDatosGrpc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnEnviarDatosGrpc"
+                app:layout_constraintTop_toTopOf="@+id/btnEnviarDatosGrpc" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

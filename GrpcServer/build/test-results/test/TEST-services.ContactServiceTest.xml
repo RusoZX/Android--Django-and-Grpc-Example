@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="services.ContactServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-04-27T16:42:23" hostname="DESKTOP-TIFL3MM" time="3.242">
+  <properties/>
+  <testcase name="testGetContactsWithCorrectData" classname="services.ContactServiceTest" time="2.984"/>
+  <testcase name="testSaveContactWithBadData" classname="services.ContactServiceTest" time="0.03"/>
+  <testcase name="testSaveContactWithCorrectData" classname="services.ContactServiceTest" time="0.151"/>
+  <testcase name="testGetContactsWithBadData" classname="services.ContactServiceTest" time="0.075"/>
+  <system-out><![CDATA[[gender: "Male"
+title: "Mr."
+firstName: "John"
+lastName: "Doe"
+street: "123 Main St"
+province: "Ontario"
+city: "Toronto"
+country: "Canada"
+longitudeCoor: "43.6532 N"
+latitudeCoor: "79.3832 W"
+timeZone: "Eastern Time (ET)"
+timeDesc: "-0500"
+email: "john.doe@example.com"
+userName: "johndoe"
+birthDay: "1980-01-01"
+landLinePhone: "416-555-1234"
+phoneNumber: "416-555-5678"
+urlImage: "https://example.com/johndoe.jpg"
+postalCode: "M1R 3A5"
+age: "23"
+, gender: "Female"
+title: "Ms."
+firstName: "Jane"
+lastName: "Smith"
+street: "456 Oak Ave"
+province: "British Columbia"
+city: "Vancouver"
+country: "Canada"
+longitudeCoor: "49.2827 N"
+latitudeCoor: "123.1207 W"
+timeZone: "Pacific Time (PT)"
+timeDesc: "-0800"
+email: "jane.smith@example.com"
+userName: "janesmith"
+birthDay: "1990-02-14"
+landLinePhone: "604-555-2345"
+phoneNumber: "604-555-6789"
+urlImage: "https://example.com/janesmith.jpg"
+postalCode: "V6Z 1L3"
+age: "25"
+]
+<-------------------------GET CONTACTS REQUEST-------------------------------------->
+Quantity 2
+RESULT_>>>>>>>>>>>>>>[[Male, Mr., John, Doe, 123 Main St, Ontario, Toronto, Canada, M1R 3A5, 43.6532 N, 79.3832 W, Eastern Time (ET), -0500, john.doe@example.com, johndoe, 1980-01-01, 23, 416-555-1234, 416-555-5678, https://example.com/johndoe.jpg], [Female, Ms., Jane, Smith, 456 Oak Ave, British Columbia, Vancouver, Canada, V6Z 1L3, 49.2827 N, 123.1207 W, Pacific Time (PT), -0800, jane.smith@example.com, janesmith, 1990-02-14, 25, 604-555-2345, 604-555-6789, https://example.com/janesmith.jpg]]
+<-------------------------SAVE CONTACT REQUEST-------------------------------------->
+Contact: 
+<-------------------------SAVE CONTACT REQUEST-------------------------------------->
+Contact: gender: "Male"
+title: "Mr."
+firstName: "John"
+lastName: "Doe"
+street: "123 Main St"
+province: "Ontario"
+city: "Toronto"
+country: "Canada"
+longitudeCoor: "43.6532 N"
+latitudeCoor: "79.3832 W"
+timeZone: "Eastern Time (ET)"
+timeDesc: "-0500"
+email: "john.doe@example.com"
+userName: "example01"
+birthDay: "1980-01-01"
+landLinePhone: "416-555-1234"
+phoneNumber: "416-555-5678"
+urlImage: "https://example.com/johndoe.jpg"
+postalCode: "M1R 3A5"
+age: "23"
+
+<-------------------------GET CONTACTS REQUEST-------------------------------------->
+Quantity -1
+/////////////////CONSULT ERROR///////////////
+Sql code:Select gender,title, firstName,lastName,street,province,city,country,postalCode,longitudeCoor,latitudeCoor,timeZone,timeDesc,email,userName,birthDay,age,landLinePhone,phoneNumber, urlImage from contacts limit -1
+ ERROR MESSAGE: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1' at line 1
+/////////////////////////////////GET CONTACTS ERROR//////////////////////////////////
+Data base Exception
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

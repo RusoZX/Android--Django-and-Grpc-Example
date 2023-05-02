@@ -1,0 +1,43 @@
+generated/General.java
+ generated.General
+ generated.General$ClientPetitionGetContacts
+ generated.General$ClientPetitionGetContacts$1
+ generated.General$ClientPetitionGetContacts$Builder
+ generated.General$ClientPetitionGetContactsOrBuilder
+ generated.General$ClientPetitionSaveContact
+ generated.General$ClientPetitionSaveContact$1
+ generated.General$ClientPetitionSaveContact$Builder
+ generated.General$ClientPetitionSaveContactOrBuilder
+ generated.General$Contact
+ generated.General$Contact$1
+ generated.General$Contact$Builder
+ generated.General$ContactOrBuilder
+ generated.General$ServerResponseGetContacts
+ generated.General$ServerResponseGetContacts$1
+ generated.General$ServerResponseGetContacts$Builder
+ generated.General$ServerResponseGetContactsOrBuilder
+ generated.General$ServerResponseSaveContact
+ generated.General$ServerResponseSaveContact$1
+ generated.General$ServerResponseSaveContact$Builder
+ generated.General$ServerResponseSaveContactOrBuilder
+ generated.General$StatusCode
+ generated.General$StatusCode$1
+generated/serviceContactGrpc.java
+ generated.serviceContactGrpc
+ generated.serviceContactGrpc$1
+ generated.serviceContactGrpc$2
+ generated.serviceContactGrpc$3
+ generated.serviceContactGrpc$MethodHandlers
+ generated.serviceContactGrpc$serviceContactBaseDescriptorSupplier
+ generated.serviceContactGrpc$serviceContactBlockingStub
+ generated.serviceContactGrpc$serviceContactFileDescriptorSupplier
+ generated.serviceContactGrpc$serviceContactFutureStub
+ generated.serviceContactGrpc$serviceContactImplBase
+ generated.serviceContactGrpc$serviceContactMethodDescriptorSupplier
+ generated.serviceContactGrpc$serviceContactStub
+services/DataBase.java
+ services.DataBase
+services/ContactService.java
+ services.ContactService
+GrpcServer.java
+ GrpcServer

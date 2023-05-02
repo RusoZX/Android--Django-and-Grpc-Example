@@ -1,0 +1,25 @@
+from django.db import models
+
+# Create your models here.
+class Contact(models.Model):
+    gender = models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    firstName = models.CharField(max_length=200)
+    lastName = models.CharField(max_length=200)
+    street = models.CharField(max_length=300)
+    province = models.CharField(max_length=300)
+    city = models.CharField(max_length=200)
+    country = models.CharField(max_length=200)
+    postalCode = models.CharField(max_length=200)
+    longitudeCoor = models.CharField(max_length=200)
+    latitudeCoor = models.CharField(max_length=200) 
+    timeZone = models.CharField(max_length=200)
+    timeDesc = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    userName = models.CharField(max_length=200)
+    birthDay = models.CharField(max_length=200)
+    age = models.CharField(max_length=200)
+    landLinePhone = models.CharField(max_length=200)
+    phoneNumber = models.CharField(max_length=200)
+    urlImage= models.CharField(max_length=500)
+    created_at= models.DateTimeField(auto_now_add=True)

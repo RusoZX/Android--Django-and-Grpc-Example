@@ -1,0 +1,48 @@
+syntax ="proto3";
+package generated;
+
+enum StatusCode {
+  OK = 0;
+  SERVER_ERROR = 1;
+}
+message Contact {
+  string gender = 1;
+  string title = 2;
+  string firstName = 3;
+  string lastName = 4;
+  string street = 5;
+  string province = 6;
+  string city = 7;
+  string country = 8;
+  string longitudeCoor = 9;
+  string latitudeCoor=10;
+  string timeZone = 11;
+  string timeDesc = 12;
+  string email = 13;
+  string userName= 14;
+  string birthDay = 15;
+  string landLinePhone = 16;
+  string phoneNumber = 17;
+  string urlImage = 18;
+  string postalCode = 19;
+  string age = 20;
+}
+//Save contact
+message ClientPetitionSaveContact{
+  Contact contact = 1;
+}
+message ServerResponseSaveContact{
+  StatusCode statusCode = 1;
+}
+//Get contacts
+message ClientPetitionGetContacts{
+  int32 quantity = 1;
+}
+message ServerResponseGetContacts{
+  StatusCode statusCode = 1;
+  repeated Contact contacts= 2;
+}
+service serviceContact{
+  rpc saveContact(ClientPetitionSaveContact) returns (ServerResponseSaveContact);
+  rpc getContacts(ClientPetitionGetContacts) returns (ServerResponseGetContacts);
+}

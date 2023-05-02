@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">PruebaCasFID</string>
+    <string name="cantidad">Eliga una cantidad de contactos a mostrar</string>
+    <string name="btnGuardarContactos">Guardar todos los contactos mostrados</string>
+    <string name="nombreIns">Nombre: %s</string>
+    <string name="telefonoIns">Teléfono Movil: %s</string>
+    <string name="emailIns">E-Mail: %s</string>
+    <string name="generoIns">Género: %s</string>
+    <string name="tituloIns">Título: %s</string>
+    <string name="apellidosIns">Apellidos: %s</string>
+    <string name="calleIns">Calle: %s</string>
+    <string name="provinciaIns">Provincia: %s</string>
+    <string name="ciudadIns">Ciudad: %s</string>
+    <string name="paisIns">País: %s</string>
+    <string name="codigoPostalIns">Código Postal: %s</string>
+    <string name="latitudIns">Latitud: %s</string>
+    <string name="longitudIns">Longitud: %s</string>
+    <string name="zonaHorariaIns">Zona Horaria: %s</string>
+    <string name="descripcionZonaHorariaIns">Descripción Zona Horaria: %s</string>
+    <string name="fechaNacimientoIns">Fecha Nacimiento: %s</string>
+    <string name="edadIns">Edad: %s</string>
+    <string name="nickNameIns">Nick Name: %s</string>
+    <string name="telefonoFijoIns">Teléfono Fijo: %s</string>
+    <string name="back">Volver</string>
+    <string name="errorServidor">Ha habido un problema en el servidor</string>
+    <string name="contactoGuardado">Se guardo el contacto con éxito</string>
+    <string name="errorGuradarContacto">Ha habido un problema al guardar el contacto</string>
+    <string name="errorPermisos">No tengo permisos para guardar el contacto</string>
+    <string name="noContactos">No hay contactos guardados</string>
+    <string name="btnGrpc">Enviar datos a Grpc</string>
+    <string name="btnDjango">Enviar datos a Django</string>
+    <string name="btnMostrarDjango">Mostrar Contactos Via Django</string>
+    <string name="btnMostrarGrpc">Mostrar Contactos Via Grpc</string>
+    <string name="ok">Se ha guardado el contacto</string>
+</resources>
